@@ -1,0 +1,8 @@
+@import 'nativescript-theme-core/css/core.light.css';
+
+.back-image {
+    background-image: url("res://logo");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

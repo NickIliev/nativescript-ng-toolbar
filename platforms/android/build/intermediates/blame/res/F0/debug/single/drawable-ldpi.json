@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/niliev/Desktop/git/ng-event-emitters/platforms/android/build/intermediates/res/merged/F0/debug/drawable-ldpi/background.png",
+        "source": "/Users/niliev/Desktop/git/ng-event-emitters/platforms/android/src/main/res/drawable-ldpi/background.png"
+    },
+    {
+        "merged": "/Users/niliev/Desktop/git/ng-event-emitters/platforms/android/build/intermediates/res/merged/F0/debug/drawable-ldpi/logo.png",
+        "source": "/Users/niliev/Desktop/git/ng-event-emitters/platforms/android/src/main/res/drawable-ldpi/logo.png"
+    },
+    {
+        "merged": "/Users/niliev/Desktop/git/ng-event-emitters/platforms/android/build/intermediates/res/merged/F0/debug/drawable-ldpi/icon.png",
+        "source": "/Users/niliev/Desktop/git/ng-event-emitters/platforms/android/src/main/res/drawable-ldpi/icon.png"
+    }
+]
