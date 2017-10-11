@@ -12,6 +12,7 @@ export class MainComponent {
 
     constructor(private routerExtensions: RouterExtensions) { }
 
+    // the EventEmitter will send the string value from ToolbarComponent
     onNotify(message: string): void {
         switch (message) {
             case "goToFirst":

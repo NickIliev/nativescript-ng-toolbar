@@ -1,6 +1,8 @@
 <GridLayout rows="*, auto" class="page">
     <router-outlet row="0" name="pagesOutlet"></router-outlet>
     <DockLayout row="1" stretchLastChild="true">
+        <!-- custom pooperty 'master' will be outputed to child component-->
+        <!-- custom property 'toolbar' will input the event via EventEmitter-->
         <toolbar [master]="master" (toolbar)="onNotify($event)"></toolbar>
     </DockLayout>
 </GridLayout>

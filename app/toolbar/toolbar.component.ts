@@ -8,7 +8,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class ToolbarComponent {
+    // using 'master' property from the parent component (MainComponent)
     @Input('master') masterName: string;
+
+    // outputs the events fired from from our custom toolbar 
     @Output() toolbar: EventEmitter<string> = new EventEmitter<string>();
 
     goToFirst() {
