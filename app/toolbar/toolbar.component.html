@@ -1,5 +1,6 @@
-<GridLayout rows="50" columns="*, *, *" class="p-l-8 p-r-8 p-t-10 p-b-10">
-    <Button col="0" text="First" class="fa" (tap)="goToFirst()"></Button>
-    <Button col="1" text="Second" class="fa" (tap)="goToSecond()"></Button>
-    <Button col="2" text="Third" class="fa" (tap)="goToThird()"></Button>
+<GridLayout rows="50, auto" columns="*, *, *" class="p-l-8 p-r-8 p-t-10 p-b-10">
+    <Button row="0" col="0" text="First" class="fa" (tap)="goToFirst()"></Button>
+    <Button row="0" col="1" text="Second" class="fa" (tap)="goToSecond()"></Button>
+    <Button row="0" col="2" text="Third" class="fa" (tap)="goToThird()"></Button>
+    <Label row="1" col="0" colSpan="3" text="Created by {{ masterName }}" textWrap="true" class="m-l-30 m-t-10 m-b-10"></Label>
 </GridLayout>

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output } from "@angular/core";
 
 import { RouterExtensions } from "nativescript-angular/router";
 
@@ -8,6 +8,7 @@ import { RouterExtensions } from "nativescript-angular/router";
     templateUrl: "./main.component.html",
 })
 export class MainComponent {
+    public master: string = 'Nick Iliev';
 
     constructor(private routerExtensions: RouterExtensions) { }
 

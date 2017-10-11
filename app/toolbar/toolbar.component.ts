@@ -1,5 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { Button } from "ui/button";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'toolbar',
@@ -9,19 +8,18 @@ import { Button } from "ui/button";
 })
 
 export class ToolbarComponent {
-    @Output() notify: EventEmitter<string> = new EventEmitter<string>();
-
-    constructor() { }
+    @Input('master') masterName: string;
+    @Output() toolbar: EventEmitter<string> = new EventEmitter<string>();
 
     goToFirst() {
-        this.notify.emit("goToFirst");
+        this.toolbar.emit("goToFirst");
     }
 
     goToSecond() {
-        this.notify.emit("goToSecond");
+        this.toolbar.emit("goToSecond");
     }
 
     goToThird() {
-        this.notify.emit("goToThird");
+        this.toolbar.emit("goToThird");
     }
 }
