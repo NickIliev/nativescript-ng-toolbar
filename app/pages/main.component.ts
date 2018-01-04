@@ -1,6 +1,6 @@
 import { Component, Output } from "@angular/core";
-
 import { RouterExtensions } from "nativescript-angular/router";
+import { NavigationExtras } from "@angular/router";
 
 @Component({
     selector: "first",
@@ -14,6 +14,7 @@ export class MainComponent {
 
     // the EventEmitter will send the string value from ToolbarComponent
     onNotify(message: string): void {
+
         switch (message) {
             case "goToFirst":
                 this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['first'] } }]);
@@ -27,5 +28,9 @@ export class MainComponent {
             default:
                 break;
         }
+    }
+
+    onAction() {
+        this.routerExtensions.back();
     }
 }

@@ -1,3 +1,8 @@
+<ActionBar title="Nested Routing" class="action-bar">
+  <ActionItem (tap)="onAction()">
+    <Button text="Go Back" class="action-item"></Button>
+  </ActionItem>
+</ActionBar>
 <GridLayout rows="*, auto" class="page">
     <router-outlet row="0" name="pagesOutlet"></router-outlet>
     <DockLayout row="1" stretchLastChild="true">
