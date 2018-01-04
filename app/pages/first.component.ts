@@ -8,11 +8,20 @@ import "rxjs/add/operator/switchMap";
     templateUrl: "./first.component.html",
 })
 export class FirstComponent{
-    public id: number;
+    public id: number = 0;
+    public name: string = "No params passed yet..";
     
     constructor(private pageRoute: PageRoute) {
         this.pageRoute.activatedRoute
-        .switchMap(activatedRoute => activatedRoute.params)
-        .forEach((params) => { this.id = +params["id"]; });
+        .switchMap(activatedRoute => activatedRoute.queryParams)
+        .forEach((params) => { 
+            if (params["id"]) {
+                this.id = +params["id"]; 
+                this.name = params["name"];
+            }
+        });
+
+        console.log(this.id);
+        console.log(this.name);
     }
  }

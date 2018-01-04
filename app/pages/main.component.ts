@@ -15,15 +15,37 @@ export class MainComponent {
     // the EventEmitter will send the string value from ToolbarComponent
     onNotify(message: string): void {
 
+        let navigationExtrasPageOne: NavigationExtras = {
+            queryParams: {
+                "id": "1",
+                "name": "My First Page"
+            }
+        };
+
+        let navigationExtrasPageTwo: NavigationExtras = {
+            queryParams: {
+                "id": "2",
+                "name": "Second Page Loaded"
+            }
+        };
+
+        let navigationExtrasPageThree: NavigationExtras = {
+            queryParams: {
+                "id": "3",
+                "name": "Third Page is Blue"
+            }
+        };
+
+
         switch (message) {
             case "goToFirst":
-                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['first'] } }]);
+                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['first'] } }], navigationExtrasPageOne);
                 break;
             case "goToSecond":
-                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['second'] } }]);
+                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['second'] } }], navigationExtrasPageTwo);
                 break;
             case "goToThird":
-                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['third'] } }]);
+                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['third'] } }], navigationExtrasPageThree);
                 break;
             default:
                 break;
