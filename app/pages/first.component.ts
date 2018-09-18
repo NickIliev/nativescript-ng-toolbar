@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
-import { PageRoute } from "nativescript-angular/router";
-import "rxjs/add/operator/switchMap";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: "first",
@@ -11,17 +10,8 @@ export class FirstComponent{
     public id: number = 0;
     public name: string = "No params passed yet..";
     
-    constructor(private pageRoute: PageRoute) {
-        this.pageRoute.activatedRoute
-        .switchMap(activatedRoute => activatedRoute.queryParams)
-        .forEach((params) => { 
-            if (params["id"]) {
-                this.id = +params["id"]; 
-                this.name = params["name"];
-            }
-        });
-
-        console.log(this.id);
-        console.log(this.name);
+    constructor(private _activatedRoute: ActivatedRoute) {
+        this.id = this._activatedRoute.snapshot.queryParams["id"];
+        this.name = this._activatedRoute.snapshot.queryParams["name"];
     }
  }

@@ -14,3 +14,5 @@ hooks/*
 native-nick-release-key.jks
 my-release-key.jks
 google-services.json
+
+package-lock.json

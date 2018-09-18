@@ -1,4 +1,4 @@
-import { Component, Output } from "@angular/core";
+import { Component } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular/router";
 import { NavigationExtras } from "@angular/router";
 
@@ -14,7 +14,6 @@ export class MainComponent {
 
     // the EventEmitter will send the string value from ToolbarComponent
     onNotify(message: string): void {
-
         let navigationExtrasPageOne: NavigationExtras = {
             queryParams: {
                 "id": "1",
@@ -35,7 +34,6 @@ export class MainComponent {
                 "name": "Third Page is Blue"
             }
         };
-
 
         switch (message) {
             case "goToFirst":
