@@ -10,9 +10,9 @@ import { MainComponent } from "./pages/main.component";
 const routes: Routes = [
     { path: "", redirectTo: "/main/(pagesOutlet:first)", pathMatch: "full" },
     { path: "main", component: MainComponent, children: [
-        { path: "first", component: FirstComponent, outlet: "pagesOutlet" },
-        { path: "second", component: SecondComponent, outlet: "pagesOutlet"  },
-        { path: "third", component: ThirdComponent, outlet: "pagesOutlet"  }
+        { path: "first-component", component: FirstComponent, outlet: "pagesOutlet" },
+        { path: "second-component", component: SecondComponent, outlet: "pagesOutlet"  },
+        { path: "third-component", component: ThirdComponent, outlet: "pagesOutlet"  }
     ] }
 ];
 

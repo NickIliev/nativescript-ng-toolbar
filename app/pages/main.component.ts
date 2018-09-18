@@ -37,13 +37,14 @@ export class MainComponent {
 
         switch (message) {
             case "goToFirst":
-                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['first'] } }], navigationExtrasPageOne);
+                // pagesOutlet is the outlet name defined main-page.xml and in app-routing.ts
+                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['first-component'] } }], navigationExtrasPageOne);
                 break;
             case "goToSecond":
-                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['second'] } }], navigationExtrasPageTwo);
+                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['second-component'] } }], navigationExtrasPageTwo);
                 break;
             case "goToThird":
-                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['third'] } }], navigationExtrasPageThree);
+                this.routerExtensions.navigate(["/main", { outlets: { pagesOutlet: ['third-component'] } }], navigationExtrasPageThree);
                 break;
             default:
                 break;
