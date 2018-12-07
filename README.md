@@ -1,9 +1,26 @@
-# POC NativeScript 3.4.0 + Angular (5.x.x) application using Angular EventEmitters and nested routing (passing params with PageRoute).
+# POC NativeScript 5 + Angular (7.x.x) application using Angular EventEmitters and nested routing (passing params with PageRoute).
 
 
-The applicaiton demonstrates how to create custom bottom toolbar while using `EventEmitters` and nested `router-outlet` while passing params with `PageRoute`.
+The application demonstrates several techniques:
 
+- How to create custom components with Angular(e.g the bottom toolbar in `toolbar/toolbar.component` which is used in `pages/main.component.html`)
+
+- Using `EventEmitters` 
+    * passing data from and to custom components (in the app context the `toolbar/toolbar.component.html`) while using `Input` and `Output`.
+
+- Using nested `router-outlet`
+    * passing data with `RouterExtensions`.
+    * receving data with `ActivatedRoute`.
+
+
+Run the demo app on ANdroid
 ```
-npm install
-tns run android | ios
+npm i
+tns run android --bundle
+```
+
+Run the demo app on iOS
+```
+npm i
+tns run ios --bundle
 ```
