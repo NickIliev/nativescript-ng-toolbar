@@ -9,7 +9,7 @@ The application demonstrates several techniques:
     * passing data from and to custom components (in the app context the `toolbar/toolbar.component.html`) while using `Input` and `Output`.
 
 - Using nested `router-outlet`
-    * passing data with `RouterExtensions`.
+    * passing data with `RouterExtensions` and `queryParams`.
     * receving data with `ActivatedRoute`.
 
 
